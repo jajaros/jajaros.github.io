@@ -2,18 +2,18 @@
 ---
 const projects = [
   {
-    title: "Záhrada pri vile",
-    location: "Bratislava, Slovensko",
-    year: "2025",
+    title: "Tokajská záhrada",
+    location: "Čerhov, Slovensko",
+    year: "2013",
     image:
-      "https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1600&q=85",
+      "/images/projekty/01/zahrada_tokaj_1.jpg",
   },
   {
-    title: "Záhrada mestského domu",
-    location: "Praha, Česká republika",
-    year: "2024",
+    title: "Záhrada s prístreškom",
+    location: "Praha, Česká republika (projektované a realizované v zamestnaneckom pomere v Landart atelier s.r.o)",
+    year: "2014",
     image:
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=85",
+      "/images/projekty/02/zahrada_s_pristreskom1.jpg",
   },
   {
     title: "Útočisko v lese",
@@ -39,14 +39,14 @@ const projects = [
     <meta name="viewport" content="width=device-width" />
     <meta
       name="description"
-      content="HORTUS VIRIDIS — ateliér záhradnej a krajinnej architektúry. Individuálny prístup, zaujímavé riešenia, funkčnosť a precíznosť."
+      content="HRTS VRDS — ateliér záhradnej a krajinnej architektúry. Individuálny prístup, zaujímavé riešenia, funkčnosť a precíznosť."
     />
-    <title>HORTUS VIRIDIS — Záhradná architektúra</title>
+    <title>HRTS VRDS — Záhradná architektúra</title>
   </head>
 
   <body>
     <header class="header">
-      <a href="/" class="logo">HORTUS VIRIDIS<span>.</span></a>
+      <a href="/" class="logo">HRTS VRDS<span>.</span></a>
 
       <nav>
         <a href="#projects">Projekty</a>
@@ -74,7 +74,7 @@ const projects = [
           <p class="eyebrow">Záhradná architektúra · Od roku 2015</p>
 
           <h1>
-            Hortus Viridis<br />
+            HRTS VRDS<br />
             záhradní architekti.
           </h1>
 
@@ -109,7 +109,7 @@ const projects = [
             <p>
               Sme mladá dvojica záhradných architektov, ktorá sa po 5 ročnom
               pôsobení v praxi rozhodla založiť ateliér záhradnej a krajinnej
-              architektúry – <strong>HORTUS VIRIDIS.</strong>
+              architektúry – <strong>HRTS VRDS.</strong>
             </p>
 
             <p>
@@ -260,17 +260,27 @@ const projects = [
 
         <div class="contact-bottom">
           <span>Bratislava · Praha · Viedeň</span>
-          <span>© 2026 HORTUS VIRIDIS</span>
+          <span>© 2026 HRTS VRDS</span>
         </div>
       </section>
     </main>
 
     <footer>
-      <a href="/" class="logo">HORTUS VIRIDIS<span>.</span></a>
+      <a href="/" class="logo">HRTS VRDS<span>.</span></a>
 
       <p>Záhradná architektúra</p>
 
-      <a href="#top">Späť hore ↑</a>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/_hortus_viridis_/" target="_blank" rel="noopener noreferrer">
+          Instagram ↗
+        </a>
+
+        <a href="https://www.facebook.com/zahradniarchitekti/" target="_blank" rel="noopener noreferrer">
+          Facebook ↗
+        </a>
+
+        <a href="#top">Späť hore ↑</a>
+      </div>
     </footer>
   </body>
 </html>
@@ -902,6 +912,24 @@ const projects = [
 
     footer p {
       display: none;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
+    .footer-links {
+      gap: 18px;
     }
   }
 </style>
