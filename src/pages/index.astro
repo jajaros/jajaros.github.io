@@ -1,5 +1,7 @@
 ```astro
 ---
+import Footer from "../components/Footer.astro";
+
 const projects = [
   {
     title: "Tokajská záhrada",
@@ -264,25 +266,9 @@ const projects = [
         </div>
       </section>
     </main>
-
-    <footer>
-      <a href="/" class="logo">HRTS VRDS<span>.</span></a>
-
-      <p>Záhradná architektúra</p>
-
-      <div class="footer-links">
-        <a href="https://www.instagram.com/_hortus_viridis_/" target="_blank" rel="noopener noreferrer">
-          Instagram ↗
-        </a>
-
-        <a href="https://www.facebook.com/zahradniarchitekti/" target="_blank" rel="noopener noreferrer">
-          Facebook ↗
-        </a>
-
-        <a href="#top">Späť hore ↑</a>
-      </div>
-    </footer>
   </body>
+
+  <Footer />
 </html>
 
 <style>
@@ -766,24 +752,6 @@ const projects = [
     text-transform: uppercase;
   }
 
-  /* FOOTER */
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 4vw;
-    background: #d8d4ca;
-    border-top: 1px solid #b8b4aa;
-  }
-
-  footer p,
-  footer > a:last-child {
-    margin: 0;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
   /* MOBILE */
 
   @media (max-width: 800px) {
@@ -914,23 +882,4 @@ const projects = [
       display: none;
     }
   }
-
-  .footer-links {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-  }
-
-  .footer-links a {
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 800px) {
-    .footer-links {
-      gap: 18px;
-    }
-  }
 </style>
-```
