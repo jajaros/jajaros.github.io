@@ -1,4 +1,3 @@
-```astro
 ---
 import Footer from "../components/Footer.astro";
 
@@ -7,15 +6,14 @@ const projects = [
     title: "Tokajská záhrada",
     location: "Čerhov, Slovensko",
     year: "2013",
-    image:
-      "/images/projekty/01/zahrada_tokaj_1.jpg",
+    image: "/images/projekty/01/zahrada_tokaj_1.jpg",
   },
   {
     title: "Záhrada s prístreškom",
-    location: "Praha, Česká republika (projektované a realizované v zamestnaneckom pomere v Landart atelier s.r.o)",
+    location:
+      "Praha, Česká republika (projektované a realizované v zamestnaneckom pomere v Landart atelier s.r.o)",
     year: "2014",
-    image:
-      "/images/projekty/02/zahrada_s_pristreskom1.jpg",
+    image: "/images/projekty/02/zahrada_s_pristreskom1.jpg",
   },
   {
     title: "Útočisko v lese",
@@ -73,7 +71,9 @@ const projects = [
         </div>
 
         <div class="hero-content">
-          <p class="eyebrow">Záhradná architektúra · Od roku 2015</p>
+          <p class="eyebrow">
+            Záhradná architektúra · Od roku 2015
+          </p>
 
           <h1>
             HRTS VRDS<br />
@@ -81,7 +81,9 @@ const projects = [
           </h1>
 
           <div class="hero-bottom">
-            <p class="eyebrow">Záhradná architektúra · Od roku 2015</p>
+            <p class="eyebrow">
+              Záhradná architektúra · Od roku 2015
+            </p>
 
             <a
               href="#projects"
@@ -110,8 +112,8 @@ const projects = [
           <div class="intro-text">
             <p>
               Sme dvojica záhradných architektov, ktorá sa po 5 ročnom
-              pôsobení v praxi rozhodla založiť vlastný ateliér záhradnej a krajinnej
-              architektúry – <strong>HRTS VRDS.</strong>
+              pôsobení v praxi rozhodla založiť vlastný ateliér záhradnej a
+              krajinnej architektúry – <strong>HRTS VRDS.</strong>
             </p>
 
             <p>
@@ -222,6 +224,7 @@ const projects = [
                     alt={project.title}
                     loading="lazy"
                   />
+
                   <span class="project-arrow">↗</span>
                 </div>
 
@@ -248,21 +251,52 @@ const projects = [
 
       <!-- CONTACT -->
       <section class="contact" id="contact">
-        <p class="eyebrow">Kontakt</p>
+        <div class="contact-top">
+          <p class="eyebrow">Kontakt</p>
+
+          <span class="section-number">04</span>
+        </div>
 
         <h2>
-          Vaša predstava. Náš návrh.<br />
+          Vaša predstava.<br />
+          Náš návrh.
         </h2>
 
-        <a href="mailto:hello@atelier.example" class="contact-link">
-          hello@atelier.example
-          <span>↗</span>
-        </a>
+        <!-- MENÁ + FAKTURAČNÉ ÚDAJE -->
+        <div class="contact-details">
+          <div class="contact-person">
+            <p class="contact-label">Ing. Architekt Jedna</p>
 
-        <div class="contact-bottom">
-          <span>Košice · Čerhov</span>
-          <span>© 2026 HRTS VRDS</span>
+            <a href="tel:+421XXXXXXXXX">
+              +421 XXX XXX XXX
+            </a>
+          </div>
+
+          <div class="contact-person">
+            <p class="contact-label">Ing. Architekt Dva</p>
+
+            <a href="tel:+421XXXXXXXXX">
+              +421 XXX XXX XXX
+            </a>
+          </div>
+
+          <div class="billing-address">
+            <p class="contact-label">Fakturačné údaje</p>
+
+            <p>
+              Ulica a číslo · PSČ Mesto
+            </p>
+          </div>
         </div>
+
+        <!-- EMAIL -->
+        <a
+          href="mailto:hello@atelier.example"
+          class="contact-email"
+        >
+          <span>hello@atelier.example</span>
+          <span class="email-arrow">↗</span>
+        </a>
       </section>
     </main>
   </body>
@@ -295,6 +329,8 @@ const projects = [
     text-decoration: none;
   }
 
+  /* HEADER */
+
   .header {
     position: absolute;
     z-index: 10;
@@ -306,7 +342,6 @@ const projects = [
     justify-content: space-between;
     padding: 28px 4vw;
     color: white;
-    mix-blend-mode: normal;
   }
 
   .logo {
@@ -351,6 +386,8 @@ const projects = [
     border: 0;
     background: none;
   }
+
+  /* HERO */
 
   .hero {
     position: relative;
@@ -613,7 +650,8 @@ const projects = [
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition:
+      transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 
   .project:hover .project-image img {
@@ -686,59 +724,114 @@ const projects = [
     color: white;
   }
 
-  /* STATEMENT */
-
-  .statement {
-    padding: 190px 4vw;
-    background: #20211e;
-    color: #e8e5de;
-  }
-
-  .statement h2 {
-    max-width: 1200px;
-    margin: 120px 0 0;
-    font-size: clamp(48px, 7vw, 110px);
-    line-height: 0.94;
-    letter-spacing: -0.06em;
-    font-weight: 400;
-  }
-
-  .statement h2 em {
-    color: #9f9d95;
-  }
-
   /* KONTAKT */
 
   .contact {
-    min-height: 85vh;
-    padding: 150px 4vw 45px;
+    min-height: auto;
+    padding: 140px 4vw 45px;
     background: #d8d4ca;
     display: flex;
     flex-direction: column;
   }
 
+  .contact-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   .contact h2 {
-    margin: auto 0;
-    font-size: clamp(60px, 11vw, 130px);
-    line-height: 0.82;
+    margin: 120px 0 100px;
+    max-width: 1200px;
+    font-size: clamp(64px, 11vw, 150px);
+    line-height: 0.84;
     letter-spacing: -0.07em;
     font-weight: 400;
   }
 
-  .contact-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: min(600px, 100%);
-    padding-bottom: 14px;
-    border-bottom: 1px solid #77756f;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(24px, 3vw, 42px);
+  .contact h2 em {
+    color: #77756f;
   }
 
-  .contact-link span {
+  /* MENÁ + ADRESA */
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 5vw;
+    width: 100%;
+    padding-top: 25px;
+    border-top: 1px solid #aaa69d;
+  }
+
+  .contact-person,
+  .billing-address {
+    min-width: 0;
+  }
+
+  .contact-label {
+    margin: 0 0 14px;
+    color: #66645e;
+    font-size: 9px;
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .contact-person a {
+    display: inline-block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 1.7vw, 13px);
+    line-height: 1.15;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.25s ease;
+  }
+
+  .contact-person a:hover {
+    border-color: #1c1c1a;
+  }
+
+  .billing-address p:last-child {
+    margin: 0;
+    color: #1c1c1a;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* EMAIL */
+
+  .contact-email {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 85px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #77756f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 7vw, 80px);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+  .contact-email span:first-child {
+    transition: opacity 0.25s ease;
+  }
+
+  .contact-email:hover span:first-child {
+    opacity: 0.55;
+  }
+
+  .email-arrow {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1;
+    letter-spacing: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-email:hover .email-arrow {
+    transform: translate(5px, -5px);
   }
 
   .contact-bottom {
@@ -851,26 +944,51 @@ const projects = [
       aspect-ratio: 1 / 1.05;
     }
 
-    .statement {
-      padding: 120px 5vw;
-    }
-
-    .statement h2 {
-      margin-top: 80px;
-      font-size: 50px;
-    }
+    /* CONTACT - MOBILE */
 
     .contact {
-      min-height: 75vh;
-      padding: 110px 5vw 30px;
+      padding: 100px 5vw 30px;
     }
 
     .contact h2 {
+      margin: 80px 0 70px;
       font-size: 18vw;
+      line-height: 0.86;
+    }
+
+    .contact-details {
+      grid-template-columns: 1fr 1fr;
+      gap: 45px 25px;
+      padding-top: 20px;
+    }
+
+    .contact-person a {
+      font-size: 20px;
+    }
+
+    .billing-address {
+      grid-column: 1 / -1;
+    }
+
+    .billing-address p:last-child {
+      font-size: 12px;
+    }
+
+    .contact-email {
+      margin-top: 65px;
+      padding-bottom: 12px;
+      font-size: 12vw;
+      line-height: 0.9;
+    }
+
+    .email-arrow {
+      font-size: 22px;
     }
 
     .contact-bottom {
-      margin-top: 70px;
+      margin-top: 60px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     footer {

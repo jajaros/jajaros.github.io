@@ -1,5 +1,5 @@
  <footer>
-      <a href="/" class="logo">HRTS VRDS<span>.</span></a>
+      <a href="/" class="logo">© 2026 HRTS VRDS<span>.</span></a>
 
       <p>Záhradná architektúra</p>
 
@@ -35,21 +35,21 @@
     text-transform: uppercase;
   }
 
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
     .footer-links {
-        display: flex;
-        gap: 28px;
-        align-items: center;
-      }
-
-      .footer-links a {
-        font-size: 9px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      @media (max-width: 800px) {
-        .footer-links {
-          gap: 18px;
-        }
-      }
+      gap: 18px;
+    }
+  }
 </style>
